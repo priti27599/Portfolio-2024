@@ -3,7 +3,7 @@ import Navbar from "./components/Navbar"
 import { Home,About,Projects,Contact } from "./pages"
 const App = () => {
   return (
-      <main className="bg-slate-300/20">
+      <main className=" bg-pink-300">
           <Router>
               <Navbar/>
               <Routes>
