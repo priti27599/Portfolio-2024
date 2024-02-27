@@ -7,7 +7,7 @@ import { a } from '@react-spring/three';
 
 import islandScene from '../assets/3d/candy.glb';
 
-const Candy = ({isRotating, setIsRotating, ...props}) => {
+const Candy = ({isRotating, setIsRotating, setCurrentStage, ...props}) => {
   const candyRef = useRef();
 
   const { gl, viewport } = useThree();
@@ -121,7 +121,7 @@ const Candy = ({isRotating, setIsRotating, ...props}) => {
 
   return (
       <a.group ref={candyRef} {...props} >
-      <a.group rotation={[-Math.PI / 2, 0, 0.2]} scale={1.5}>
+      <a.group rotation={[-Math.PI / 2, 0, 0.3]} scale={1.4}>
         <a.group rotation={[Math.PI / 2, 1, 0]} >
           <a.group
             position={[13.264, 5.242, 4.096]}
@@ -303,7 +303,7 @@ const Candy = ({isRotating, setIsRotating, ...props}) => {
               material={materials["Material.026"]}
             />
           </a.group>
-          <a.group
+           <a.group
             position={[-15.185, 6.242, 16.76]}
             rotation={[Math.PI / 2, 0, Math.PI]}
             scale={0.01}
@@ -321,7 +321,7 @@ const Candy = ({isRotating, setIsRotating, ...props}) => {
               material={materials["Material.026"]}
             />
           </a.group>
-          {/*  */}
+          
           <a.group
             position={[12.916, 6.242, -11.179]}
             rotation={[Math.PI / 2, 0, Math.PI]}
@@ -358,7 +358,7 @@ const Candy = ({isRotating, setIsRotating, ...props}) => {
             rotation={[0, -Math.PI / 2, 0]}
             scale={[20.477, 0.908, 13.838]}
           />
-          <mesh
+          {/* <mesh
             castShadow
             receiveShadow
             geometry={nodes.Object_8.geometry}
@@ -366,7 +366,7 @@ const Candy = ({isRotating, setIsRotating, ...props}) => {
             position={[-0.442, 6.861, -16.432]}
             rotation={[-Math.PI, 0, -Math.PI]}
             scale={[1.287, 1.822, 1.914]}
-          />
+          /> */}
           <mesh
             castShadow
             receiveShadow
@@ -411,7 +411,7 @@ const Candy = ({isRotating, setIsRotating, ...props}) => {
             position={[7.965, 7.435, -3.547]}
             rotation={[Math.PI / 2, 0, Math.PI]}
             scale={0.01}
-          />
+          /> */}
           
           <mesh
             castShadow
@@ -457,7 +457,7 @@ const Candy = ({isRotating, setIsRotating, ...props}) => {
             rotation={[Math.PI / 2, 0, Math.PI]}
             scale={0.01}
           />
-          */}
+          
           <mesh
             castShadow
             receiveShadow
@@ -543,7 +543,7 @@ const Candy = ({isRotating, setIsRotating, ...props}) => {
             rotation={[Math.PI, -1.382, Math.PI]}
             scale={[0.632, 0.639, 0.632]}
           />
-          <mesh
+           <mesh
             castShadow
             receiveShadow
             geometry={nodes.Object_92.geometry}
